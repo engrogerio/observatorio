@@ -32,66 +32,43 @@
   </head>
 
   <body>
-    <!-- Here is our main header that is used across all the pages of our website -->
-
     <header>
-      <h1>Observatório Tatuí - Live view</h1>
+      <h1 style="text-alignment: center">Ottoservatório - Tatuí - Live view</h1>
     </header>
-    <div class="section">
       <div class="weatherWidget" ></div>
-    </div>
-    <nav>
-      <aside>
-      <table>
-        <tr>
-          <td><button>Open Roof</button></td>
-          <td><button>Open Roof</button></td>
-        </tr>
-        <tr>
-          <td><button>Open Roof</button></td>
-          <td><button>Open Roof</button></td>
-        </tr>
-        <tr>
-          <td><button>Open Roof</button></td>
-          <td><button>Open Roof</button></td>
-        </tr>
-        <tr>
-          <td><button>Open Roof</button></td>
-          <td><button>Open Roof</button></td>
-        </tr>
-        </tr>
-      </table>
-    </aside>
-      <!-- A Search form is another common non-linear way to navigate through a website. -->
-
+      <div class="row">
+        <div class="column1">
+          <table>
+            <tr>
+              <td><button>Open Roof</button></td>
+              <td><button>Open Roof</button></td>
+            </tr>
+            <tr>
+              <td><button>Open Roof</button></td>
+              <td><button>Open Roof</button></td>
+            </tr>
+            <tr>
+              <td><button>Open Roof</button></td>
+              <td><button>Open Roof</button></td>
+            </tr>
+            <tr>
+              <td><button>Open Roof</button></td>
+              <td><button>Open Roof</button></td>
+            </tr>
+          </table>
+        </div>
+        <div class="column2">
+          <div class="livecam">
+            <img src="{{ url_for('video_feed') }}" alt="room" style="width:80%">
+          </div>
+        </div>
+      </div>
       <form>
         <input type="search" name="q" placeholder="Search query" />
         <input type="submit" value="Go!" />
       </form>
-    </nav>
 
-    <!-- Here is our page's main content -->
-    <main>
-        <div class="livecam">
-          <img src="{{ url_for('video_feed') }}" alt="room" class="hero-image">
-        </div>
-
-
-      <!-- the aside content can also be nested within the main content -->
-      <aside>
-        <h2>Related</h2>
-
-        <ul>
-          <li><a href="#">Oh I do like to be beside the seaside</a></li>
-          <li><a href="#">Oh I do like to be beside the sea</a></li>
-          <li><a href="#">Although in the North of England</a></li>
-          <li><a href="#">It never stops raining</a></li>
-          <li><a href="#">Oh well…</a></li>
-        </ul>
-      </aside>
-    </main>
-
-    <!-- And here is our main footer that is used across all the pages of our website -->
+  </div>
 
     <footer>
       <p>©Copyright 2022 by Invent Sistemas. All rights reversed.</p>
