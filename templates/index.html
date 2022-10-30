@@ -1,9 +1,100 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
   <head>
-    <title>Video Streaming Demonstration</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>My page title</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet" />
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <script>
+      window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+      window.weatherWidgetConfig.push({
+          selector:".weatherWidget",
+          apiKey:"LGZXK37UPXSHX9PX89PHG325V", //Sign up for your personal key
+          location:"Tatui, BR", //Enter an address
+          unitGroup:"metric", //"us" or "metric"
+          forecastDays:5, //how many days forecast to show
+          title:"Tatuí - SP", //optional title to show in the
+          showTitle:true,
+          showConditions:true
+      });
+
+      (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+    </script>
   </head>
+
   <body>
-    <h1>Video Streaming Demonstration</h1>
-    <img src="{{ url_for('video_feed') }}">
+    <!-- Here is our main header that is used across all the pages of our website -->
+
+    <header>
+      <h1>Observatório Tatuí - Live view</h1>
+    </header>
+    <div class="section">
+      <div class="weatherWidget" ></div>
+    </div>
+    <nav>
+      <aside>
+      <table>
+        <tr>
+          <td><button>Open Roof</button></td>
+          <td><button>Open Roof</button></td>
+        </tr>
+        <tr>
+          <td><button>Open Roof</button></td>
+          <td><button>Open Roof</button></td>
+        </tr>
+        <tr>
+          <td><button>Open Roof</button></td>
+          <td><button>Open Roof</button></td>
+        </tr>
+        <tr>
+          <td><button>Open Roof</button></td>
+          <td><button>Open Roof</button></td>
+        </tr>
+        </tr>
+      </table>
+    </aside>
+      <!-- A Search form is another common non-linear way to navigate through a website. -->
+
+      <form>
+        <input type="search" name="q" placeholder="Search query" />
+        <input type="submit" value="Go!" />
+      </form>
+    </nav>
+
+    <!-- Here is our page's main content -->
+    <main>
+        <div class="livecam">
+          <img src="{{ url_for('video_feed') }}" alt="room" class="hero-image">
+        </div>
+
+
+      <!-- the aside content can also be nested within the main content -->
+      <aside>
+        <h2>Related</h2>
+
+        <ul>
+          <li><a href="#">Oh I do like to be beside the seaside</a></li>
+          <li><a href="#">Oh I do like to be beside the sea</a></li>
+          <li><a href="#">Although in the North of England</a></li>
+          <li><a href="#">It never stops raining</a></li>
+          <li><a href="#">Oh well…</a></li>
+        </ul>
+      </aside>
+    </main>
+
+    <!-- And here is our main footer that is used across all the pages of our website -->
+
+    <footer>
+      <p>©Copyright 2022 by Invent Sistemas. All rights reversed.</p>
+    </footer>
   </body>
 </html>
