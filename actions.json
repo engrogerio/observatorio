@@ -1,0 +1,24 @@
+{
+    "name": "roof",
+    "type": "press",
+    "show":{
+        "description": "Opens the roof",
+        "label": "button1",
+        "status_source": "input",
+        "color_on": "#0000FF",
+        "color_off": "#FF0000",
+        "text_on": "Roof closing",
+        "text_off": "#FF0000"
+    },
+    "work":{
+        "ports": {
+            "output_gpio": 1,
+            "input_gpio": 2
+        },
+        "on_start":{
+            "force_output_to": 1
+        },
+       
+    }
+
+}

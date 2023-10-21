@@ -1,0 +1,10 @@
+# glib-2.0
+# gstreamer-video==1.0
+# gstreamer-allocators==1.0
+# doxygen
+# dot
+# sphinx-build-3
+# sphinx-build
+jinja2
+ply
+yaml
